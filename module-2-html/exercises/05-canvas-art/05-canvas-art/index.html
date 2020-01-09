@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas art</title>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script>
+        var face = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        
+        /* Pozadina */
+        ctx.fillStyle = "lightgreen";
+        ctx.fillRect(50, 50, 400, 400);
+
+        /* Lice */
+        ctx.fillStyle = "lightyellow";
+        ctx.fillRect(160, 130, 180, 230);
+
+        /* Kosa */
+        ctx.fillStyle = "black";
+        ctx.fillRect(160, 130, 180, 40);
+
+        /* Lijevo oko */
+        ctx.beginPath();
+        ctx.arc(210, 225, 25, 0, 2 * Math.PI);
+        ctx.fillStyle = "white"
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc(210, 225, 15, 0, 2 * Math.PI);
+        ctx.fillStyle = "green"
+        ctx.fill();
+        ctx.closePath();
+
+        /* Desno oko */
+        ctx.beginPath();
+        ctx.arc(290, 225, 25, 0, 2 * Math.PI);
+        ctx.fillStyle = "white"
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc(290, 225, 15, 0, 2 * Math.PI);
+        ctx.fillStyle = "green"
+        ctx.fill();
+        ctx.closePath();
+
+        /* Nos */
+        ctx.beginPath();
+        ctx.moveTo(235, 270);
+        ctx.lineTo(265, 270);
+        ctx.lineTo(250, 260);
+        ctx.fillStyle = "grey"
+        ctx.fill();
+        ctx.closePath();
+
+        /* Usta */
+        ctx.beginPath();
+        ctx.arc(250, 300, 35, 0, 1 * Math.PI);
+        ctx.fillStyle = "lightsalmon"
+        ctx.fill();
+        ctx.closePath();
+    </script>
+</body>
+</html>
